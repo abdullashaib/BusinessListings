@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/DS_post_id"
+        android:visibility="gone"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/DS_post_title"
+        android:text="Post Title"
+        android:maxLines="1"
+        android:gravity="fill_vertical"
+        android:paddingLeft="10dp"
+        android:textSize="20dp"
+        android:textColor="@color/blueSky"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/DS_post_desc"
+        android:text="Description"
+        android:maxLines="2"
+        android:gravity="fill_vertical"
+        android:paddingLeft="10dp"
+        android:textSize="16dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/DS_post_date"
+        android:text="Post Date"
+        android:gravity="fill_vertical"
+        android:paddingLeft="10dp"
+        android:layout_marginTop="2dp"
+        android:textSize="12dp"
+        android:textStyle="italic"
+        />
+
+
+</LinearLayout>

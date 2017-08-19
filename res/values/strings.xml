@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Business Listings</string>
+    <string name="title_activity_maps">Map</string>
+
+    <string name="account_prompt">Select account type</string>
+    <string-array name="account_arrays">
+        <item>Regular</item>
+        <item>Professional</item>
+    </string-array>
+    <string name="google_maps_places_key">
+    AIzaSyD01FUzmG2yUl6wuPmhoTzPxV058CowgII
+    </string>
+    <string name="place_intro_text">
+        Please click the button below to display places nearby your location
+    </string>
+</resources>

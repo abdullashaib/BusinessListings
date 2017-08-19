@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_business_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="abdullashaib.social.com.businesslistings.BusinessList">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Please fill all required * fields"
+            android:layout_marginBottom="20dp"
+            />
+
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/BE_business_id"
+            android:visibility="gone"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:inputType="text"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:hint="Business Name *"
+            android:id="@+id/business_name"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/blackModified"
+            android:background="@drawable/edit_text_style"
+            />
+
+        <EditText
+            android:id="@+id/business_description"
+            android:gravity="top|left"
+            android:inputType="textMultiLine"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:lines="5"
+            android:scrollHorizontally="false"
+            android:hint="About Your Story *"
+            android:layout_marginTop="5dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/blackModified"
+            android:background="@drawable/edit_text_style"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/business_imageURL"
+            android:background="@drawable/edit_text_style"
+            android:visibility="gone"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/business_imagePath"
+            android:background="@drawable/edit_text_style"
+            android:visibility="gone"
+            />
+
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="250dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:id="@+id/business_logo_imageView"
+            android:visibility="gone"
+            />
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Select Logo to upload"
+            android:id="@+id/business_logo_button"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edit_text_style"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:hint="Website URL"
+            android:inputType="textUri"
+            android:ems="10"
+            android:id="@+id/business_website"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/blackModified"
+            android:fontFamily="sans-serif"
+            android:background="@drawable/edit_text_style"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:inputType="textEmailAddress"
+            android:hint="Email Address *"
+            android:ems="10"
+            android:id="@+id/business_email"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/blackModified"
+            android:fontFamily="sans-serif"
+            android:background="@drawable/edit_text_style"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:inputType="textEmailAddress"
+            android:hint="Phone Number *"
+            android:ems="10"
+            android:id="@+id/business_phone"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/blackModified"
+            android:fontFamily="sans-serif"
+            android:background="@drawable/edit_text_style"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:hint="Address Number"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/address_number"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/blackModified"
+            android:fontFamily="sans-serif"
+            android:background="@drawable/edit_text_style"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:hint="Address Name"
+            android:inputType="text"
+            android:ems="10"
+            android:id="@+id/business_address"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/blackModified"
+            android:fontFamily="sans-serif"
+            android:background="@drawable/edit_text_style"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:hint="City"
+            android:inputType="text"
+            android:ems="10"
+            android:id="@+id/business_city"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/blackModified"
+            android:fontFamily="sans-serif"
+            android:background="@drawable/edit_text_style"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:hint="Province/State"
+            android:inputType="text"
+            android:ems="10"
+            android:id="@+id/business_state"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/blackModified"
+            android:fontFamily="sans-serif"
+            android:background="@drawable/edit_text_style"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:hint="Postal Code"
+            android:inputType="text"
+            android:ems="10"
+            android:id="@+id/business_postalcode"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/blackModified"
+            android:fontFamily="sans-serif"
+            android:background="@drawable/edit_text_style"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:hint="Country"
+            android:inputType="text"
+            android:ems="10"
+            android:id="@+id/business_country"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/blackModified"
+            android:fontFamily="sans-serif"
+            android:background="@drawable/edit_text_style"
+            />
+
+
+        <Button
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Submit Profile"
+            android:id="@+id/business_submit_button"
+            android:fontFamily="sans-serif"
+            android:layout_marginTop="15dp"
+            android:padding="10dp"
+            android:background="@drawable/roundedge_button"
+            android:textColor="@color/Black"
+            android:layout_gravity="center"
+            android:onClick="submitProfile"
+            />
+
+        <Button
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Back"
+            android:id="@+id/business_back_button"
+            android:fontFamily="sans-serif"
+            android:layout_marginTop="15dp"
+            android:padding="10dp"
+            android:background="@drawable/roundedge_button"
+            android:textColor="@color/Black"
+            android:layout_gravity="center"
+            android:onClick="goHomePage"
+            />
+
+
+
+    </LinearLayout>
+
+
+</ScrollView>

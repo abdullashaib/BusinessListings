@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="abdullashaib.social.com.businesslistings">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <!--
+    package="abdullashaib.social.com.swahilicommunication"
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher_b2"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key"/>
+
+        <activity
+            android:name=".MapsActivity"
+            android:label="@string/title_activity_maps">
+        </activity>
+
+        <service android:name=".services.FirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:name=".services.FirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".LocationPicker"
+            android:label="Location Picker">
+        </activity>
+        <activity
+            android:name=".AddPost"
+            android:label="Add New Post">
+        </activity>
+        <activity
+            android:name=".BusinessList"
+            android:label="Add New Business">
+        </activity>
+        <activity
+            android:name=".EditBusiness"
+            android:label="Update Business">
+        </activity>
+        <activity
+            android:name=".UpdateBusiness"
+            android:label="Update Business">
+        </activity>
+        <activity
+            android:name=".EditPost"
+            android:label="Update Post">
+        </activity>
+        <activity
+            android:name=".UpdatePost"
+            android:label="Update Post">
+        </activity>
+        <activity
+            android:name=".EditProfile"
+            android:label="Edit Professional Profile">
+        </activity>
+        <activity
+            android:name=".ListBusiness"
+            android:label="Business List">
+        </activity>
+        <activity
+            android:name=".ListProfessional"
+            android:label="Professional List">
+        </activity>
+        <activity
+            android:name=".Login"
+            android:label="User Login">
+        </activity>
+        <activity
+            android:name=".Register"
+            android:label="User Registration">
+        </activity>
+        <activity
+            android:name=".Member"
+            android:label="Member Menu">
+        </activity>
+        <activity
+            android:name=".Professional"
+            android:label="Professional Profile">
+        </activity>
+        <activity
+            android:name=".Post"
+            android:label="Post List">
+        </activity>
+
+        <receiver android:name=".services.NetworkMonitor">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name=".BusinessProvider"
+            android:authorities="com.abdullashaib.businessProvider"
+            android:exported="true">
+        </provider>
+
+        <activity android:name=".TestActivity">
+        </activity>
+    </application>
+
+</manifest>
